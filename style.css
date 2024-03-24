@@ -10,7 +10,7 @@ body{
 .container{
     height: 100vh;
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 18% 1fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: 
     "side header"
@@ -28,6 +28,8 @@ body{
     grid-template-areas: 
     "top-sec"
     "bottom-sec";
+
+    box-shadow: 5px 0 black ;
 }
 
 .header .top-sec{
@@ -176,7 +178,7 @@ body{
 
 .main{
     background-color: #ede9fe;
-
+    padding: 25px 20px 0 25px ;
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr;
@@ -186,19 +188,54 @@ body{
     gap: 20px;
 }
 
+.projects .pro-title{
+    padding-left: 18px;
+}
+
 .main .cards{
     grid-area: projects;
-    padding: 20px 0 0 20px ;
-    background-color: #fcfcfc;
+    padding: 10px 20px 0 8px ;
+    border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    grid-template-columns: repeat(2, minmax(200px , 1fr));
     grid-template-rows: repeat(3, 1fr);
     gap: 25px;
 
 }
 
+.main .cards .card{
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    padding: 20px;
+    text-overflow: ellipsis;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158) ;
+  
 
+    & p,
+    i{
+        color: rgba(0, 0, 0 , 0.8);
+    }
 
+    position: relative;
+    
+}
+
+.card::before{
+    content: "";
+    background-color: #fbbf24;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+}
+
+.icons{
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    padding: 10px;
+}
 
 
 .right-main img{

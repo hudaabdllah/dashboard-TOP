@@ -15,6 +15,7 @@ body{
     grid-template-areas: 
     "side header"
     "side main";
+    line-height: 1.5;
 }
 
 .header{
@@ -29,7 +30,8 @@ body{
     "top-sec"
     "bottom-sec";
 
-    box-shadow: 5px 0 black ;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158) ;
+  
 }
 
 .header .top-sec{
@@ -228,6 +230,7 @@ body{
     top: 0;
     width: 5px;
     height: 100%;
+    border-radius: 10px;
 }
 
 .icons{
@@ -237,8 +240,54 @@ body{
     padding: 10px;
 }
 
+.right-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, fr );
+    gap: 40px;
+}
+.right-main .right-top h3{
+
+    padding: 0 0 20px 30px;
+
+}
+.right-main .right-top .announcements{
+    background-color: #fcfcfc;
+    padding: 0 20px ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158) ;
+  
+
+    & h5{
+        font-size: larger;
+        padding: 20px 0 0 15px;
+    }
+
+    & p{
+        color: rgba(0, 0, 0 , 0.8);
+        font-size: .8rem;
+        padding: 15px 0 15px 15px;
+    
+    }
+
+
+}
+
+.right-main .right-bottom .trending {
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: repeat(4, 1fr);
+
+    gap: 20px;
+    box-shadow: 3px 3px 10px rgb(158, 158, 158) ;
+  
+}
 
 .right-main img{
 width: 60px;
 height: auto;
+border-radius: 50%;
 }
